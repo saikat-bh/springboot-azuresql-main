@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="view.js"></script>
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+</head>
+
+<body style=" background-color: #f0f3f6;"">
+<div style=" padding: 2%; margin:1%;">
+    <img src='C:\Users\bhatt\Downloads\logo.png' style="width: 184px;">
+</div>
+<div style="padding: 2%; margin-top:3%; margin-left:6%; margin-right:6%; margin-bottom:3%; border-width: 2px;
+        border-color:black;border-style: solid; box-shadow: 1px 1px;">
+    <div style="display:flex;">
+        <p style="font-weight: bold;">Title</p>
+    </div>
+    <div style="display:flex;">
+        <p>By changing claim status you will simulate a data update from F2100 source system</p>
+    </div>
+    <div style="display:flex;">
+        <div style=" margin-right: 15px;">
+            <select id="sltClaim" onchange="selectClaim(this)" style="width: 178px;
+                height: 34px;">
+            </select>
+        </div>
+        <div>
+            <select id="sltStatus" onchange="selectStaus()" style="width: 178px;
+                height: 34px;">
+                <option value="-1">Change Claim Status</option>
+                <option value="0">0-Open</option>
+                <option value="1">1-Close</option>
+                <option value="2">2-Later st.</option>
+                <option value="3">3-Declined</option>
+                <option value="9">9-Felreg.</option>
+            </select>
+        </div>
+    </div>
+    <div style="margin-top: 28px; margin-bottom: 15px;">Time Taken :
+        <span style="font-weight: bold;" id="msg"></span>
+    </div>
+    <!--      <div style="margin-top: 1px;">Time Taken :
+               <span id="time"></span>
+           </div> -->
+
+</div>
+</body>
+<div style="padding-top: 125px; background-color:#f0f3f6;">
+    <footer role="contentinfo" class="" id="page-footer">
+        <div style="text-align: center;">
+            <p id="msg"> website Copyright © Gjensidige
+            </p>
+            <p id="time"></p>
+        </div>
+    </footer>
+</div>
+
+</html>
